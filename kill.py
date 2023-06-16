@@ -26,7 +26,7 @@ def deauth_all(amac):
     os.system(run)
 
 def userinputA():
-    print("ENTER AMAC ADDRESS")
+    print("ENTER ACCESS POINT MAC ADDRESS")
     amac=input()
     afun=validator(amac)
     while (afun==1):
@@ -35,7 +35,7 @@ def userinputA():
     return amac
     
 def userinputV():
-    print("ENTER VMAC ADDRESS")
+    print("ENTER VICTIM MAC ADDRESS")
     vmac=input()
     vfun=validator(vmac)
     while (vfun==1):
@@ -47,7 +47,7 @@ def userinputV():
 
 def main():
     amac=userinputA()
-    print("Enter the number of tdevices or enter 99 to attack the access point")
+    print("Enter the number of target devices or enter 99 to attack the access point")
     tnum=int(input())
     if tnum==99:
         deauth_all(amac)
